@@ -1,31 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/reset.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
     <title>Challenge Encriptador</title>
-</head>
-<body>
-
+  </head>
+  <body>
+    <header>
+        <img src="./images/Logo.svg" alt="logo" class="logo" />
+    </header>
     <main>
-        <img src="./images/Logo.png" alt="logo" class="logo">
-        <section>
-            <textarea name="Encriptador" placeholder="Ingrese el texto aqui" id="" cols="30" rows="10"></textarea>
-        </section>
-        <section>
-            <button type="button" class="encriptar">
-                Encriptar
-            </button>
-            <button type="button" class="desencriptar">
-                Desencriptar
-            </button>
-        </section>
+     
+      <section>
+        <div class="contenedor-caja-texto">
+          <textarea
+            name="Encriptador"
+            placeholder="Ingrese el texto aqui"
+            id=""
+            cols="30"
+            rows="10"
+            class="caja-texto"
+          ></textarea>
+        </div>
+        <div class="alerta">
+          <img src="./images/Exclamacion.svg" alt="Signo de Exclamacion" />
+          <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div>
+          <button type="button" class="boton-oscuro">Encriptar</button>
+          <button type="button" class="boton-claro">Desencriptar</button>
+        </div>
+      </section>
+      <section class="resultado">
+        <div class="contenedor-imagen">
+          <img src="./images/Muñeco.svg" alt="Muñeco" />
+        </div>
+        <div>
+          <h3>Ningun mensaje fue<br />encontrado</h3>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <div class="contenedor-copiar">
+          <button type="button" class="boton-claro">Copiar</button>
+        </div>
+        <div class="contenedor-resultado">
+          <p class="texto-resultado"></p>
+        </div>
+      </section>
     </main>
-    <footer>
-        
-    </footer>
+    <footer></footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
