@@ -2,60 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
-      rel="stylesheet"
-    />
-    <title>Challenge Encriptador</title>
+    <title>Encriptador de Texto</title>
+    
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
-    <header>
-        <img src="./images/Logo.svg" alt="logo" class="logo" />
-    </header>
-    <main>
-     
-      <section>
-        <div class="contenedor-caja-texto">
-          <textarea
-            name="Encriptador"
-            placeholder="Ingrese el texto aqui"
-            id=""
-            cols="30"
-            rows="10"
-            class="caja-texto"
-          ></textarea>
+    <div class="container">
+      <div class="encriptar">
+        <textarea
+          name="texto"
+          class="texto"
+          id="texto"
+          cols="30"
+          rows="10"
+          placeholder="Ingresa el texto aquí"
+        ></textarea>
+
+        <div class="terminos">
+          <p>Solo letras minúsculas y sin acentos.</p>
         </div>
-        <div class="alerta">
-          <img src="./images/Exclamacion.svg" alt="Signo de Exclamacion" />
-          <p>Solo letras minúsculas y sin acentos</p>
+        <div class="botones">
+          <button class="btn-encriptar" type="button" onclick="encriptar()">
+            Encriptar
+          </button>
+          <input
+            type="button"
+            class="btn-desencriptar"
+            value="Desencriptar"
+            onclick="desencriptar()"
+          />
         </div>
-        <div>
-          <button type="button" class="boton-oscuro">Encriptar</button>
-          <button type="button" class="boton-claro">Desencriptar</button>
+      </div>
+      <div class="encriptado">
+        <img src="img/muñeco.png" alt="" id="muñeco" />
+        <div class="mensaje-encriptado" id="mensaje-encriptado">
+          <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+          <p id="parrafo">
+            Ingresa el texto que deseas encriptar o desencriptar
+          </p>
         </div>
-      </section>
-      <section class="resultado">
-        <div class="contenedor-imagen">
-          <img src="./images/Muñeco.svg" alt="Muñeco" />
-        </div>
-        <div>
-          <h3>Ningun mensaje fue<br />encontrado</h3>
-          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-        </div>
-        <div class="contenedor-copiar">
-          <button type="button" class="boton-claro">Copiar</button>
-        </div>
-        <div class="contenedor-resultado">
-          <p class="texto-resultado"></p>
-        </div>
-      </section>
-    </main>
-    <footer></footer>
-    <script src="script.js"></script>
+      </div>
+    </div>
   </body>
+  <script src="index.js"></script>
 </html>
